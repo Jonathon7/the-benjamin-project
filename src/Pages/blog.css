@@ -1,0 +1,14 @@
+.blog-cont {
+  font-family: "raleway";
+  max-width: 87%;
+  margin: 0 auto;
+}
+
+.blog-header {
+  text-align: center;
+}
+
+.blog-header h3 {
+  font-weight: lighter;
+  line-height: 1.8;
+}

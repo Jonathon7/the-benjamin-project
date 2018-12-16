@@ -1,0 +1,17 @@
+.temp-cont {
+  font-family: "raleway";
+  text-align: left;
+  border: solid 2px lightgray;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  padding: 12px;
+}
+
+.temp-header {
+  letter-spacing: 1px;
+}
+
+.temp-text {
+  font-weight: lighter;
+  line-height: 1.8;
+}

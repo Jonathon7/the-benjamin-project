@@ -1,0 +1,37 @@
+.footer-cont {
+  height: 50vh;
+  width: 100%;
+  background-color: #d7baa4;
+  font-family: "raleway";
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-left: 4%;
+}
+
+.footer-links li {
+  list-style-type: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #3a3740;
+}
+
+.footer-links a:hover {
+  color: #f1e3e8;
+}
+
+.login-link {
+  background-color: #d7baa4;
+  border-color: #d7baa4;
+  font-size: 10px;
+  font-weight: lighter;
+  color: rgb(28, 27, 27);
+  cursor: pointer;
+  padding-left: 0px;
+}

@@ -1,0 +1,103 @@
+.contact-container {
+  max-width: 87%;
+  margin: 0 auto;
+  font-family: "raleway";
+}
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-header h3 {
+  font-weight: lighter;
+  line-height: 1.8;
+}
+
+.contact-form {
+  padding-top: 10%;
+  margin: 0px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #3a3740;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  color: gray;
+}
+
+.contact-info a {
+  color: black;
+}
+
+.contact-info-cont {
+  text-align: left;
+  line-height: 1.8;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 1350px) {
+  .contact-container {
+    max-width: 70%;
+    padding-bottom: 3%;
+  }
+
+  .contact-form {
+    max-width: 90%;
+  }
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  textarea {
+    padding: 70px;
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .contact-content {
+    display: flex;
+  }
+
+  .contact-info-cont,
+  .contact-info {
+    padding-top: 3%;
+    width: 100%;
+    line-height: 2;
+    padding-left: 10%;
+  }
+
+  .contact-info h1 {
+    font-size: 40px;
+  }
+
+  .contact-info h2 {
+    font-size: 30px;
+  }
+
+  .contact-info a {
+    font-size: 20px;
+  }
+}
