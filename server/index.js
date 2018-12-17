@@ -56,6 +56,8 @@ app.get(
   })
 );
 
+app.use(express.static(`${__dirname}/../build`));
+
 app.get("/success", (req, res) => {
   res.status(200).json(req.user);
 });
