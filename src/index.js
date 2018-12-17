@@ -7,7 +7,7 @@ import About from "./Pages/About";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Give from "./Pages/Give";
-import Dashboard from "./Pages/Dashboard";
+import ViewBlog from "./Components/Blogs/ViewBlog";
 
 ReactDOM.render(
   <Router>
@@ -17,7 +17,7 @@ ReactDOM.render(
       <Route path="/blog" component={Blog} />
       <Route path="/contact" component={Contact} />
       <Route path="/give" component={Give} />
-      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/viewblog/:id" component={ViewBlog} />
     </Switch>
   </Router>,
   document.getElementById("root")

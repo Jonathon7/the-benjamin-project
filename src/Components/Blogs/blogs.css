@@ -3,6 +3,11 @@
   width: 100%;
 }
 
+.blog-link {
+  text-decoration: none;
+  color: black;
+}
+
 @media (min-width: 1350px) {
   .blogs {
     padding-top: 5%;

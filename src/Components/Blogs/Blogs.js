@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BlogTemplate from "./BlogTemplate";
 import axios from "axios";
 import "./blogs.css";
+import { Link } from "react-router-dom";
 
 export default class Blog extends Component {
   constructor() {
@@ -26,12 +27,18 @@ export default class Blog extends Component {
   render() {
     let dispBlogs = this.state.blogs.map((blog, index) => {
       return (
-        <BlogTemplate
+        <Link
           key={index}
-          title={blog.title}
-          date={blog.date}
-          text={blog.text}
-        />
+          to={{ pathname: `/viewblog/${blog.id}`, state: { id: blog.id } }}
+          className="blog-link"
+        >
+          <BlogTemplate
+            title={blog.title}
+            date={blog.date}
+            text={blog.text}
+            id={blog.id}
+          />
+        </Link>
       );
     });
     return <div className="blogs">{dispBlogs}</div>;

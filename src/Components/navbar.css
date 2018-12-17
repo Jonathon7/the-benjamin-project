@@ -37,14 +37,14 @@
 
 .menu-link {
   text-decoration: none;
-  color: #f1e3e8;
+  color: white;
   margin: 0 10px;
   line-height: 70px;
   border-bottom: solid 1px black;
 }
 
 .menu-link:hover {
-  color: rgb(109, 104, 104);
+  color: #d1b29a;
 }
 
 .hidden {
@@ -82,6 +82,10 @@
 .nav-list-link {
   text-decoration: none;
   color: white;
+}
+
+.nav-list-link:hover {
+  color: #d1b29a;
 }
 
 @media (max-width: 1350px) {

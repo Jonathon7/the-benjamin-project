@@ -48,7 +48,6 @@ passport.deserializeUser(function(user, done) {
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.get(
   "/login",
   passport.authenticate("auth0", {
@@ -60,7 +59,7 @@ app.get(
 app.get("/success", (req, res) => {
   res.status(200).json(req.user);
 });
-
+app.get("/api/blog/:id", blog_controller.getPost);
 app.get("/api/blogs", blog_controller.read);
 app.post("/api/blogs", blog_controller.create);
 

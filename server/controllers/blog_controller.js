@@ -13,7 +13,6 @@ const create = (req, res, next) => {
 
 const read = (req, res, next) => {
   const db = req.app.get("db");
-
   db.get_blog()
     .then(blog => {
       res.status(200).json(blog);
@@ -21,6 +20,18 @@ const read = (req, res, next) => {
     .catch(err => {
       res.status(500).send({ errorMessage: "Something went wrong" });
       console.log(err);
+    });
+};
+
+const getPost = (req, res, next) => {
+  const db = req.app.get("db");
+
+  db.get_post([req.params.id])
+    .then(response => {
+      res.status(200).send(response);
+    })
+    .catch(err => {
+      res.status(500).send(err);
     });
 };
 
@@ -32,5 +43,6 @@ module.exports = {
   create,
   read,
   update,
-  deleted
+  deleted,
+  getPost
 };

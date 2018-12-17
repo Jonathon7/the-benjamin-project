@@ -1,0 +1,24 @@
+.viewblog-cont {
+  font-family: "raleway";
+  max-width: 87%;
+  margin: 0 auto;
+}
+
+.viewblog-header {
+  line-height: 1.5;
+}
+
+.viewblog-header h2 {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.viewblog-text {
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+.viewblog-text h3 {
+  padding-top: 4%;
+  font-weight: lighter;
+}
