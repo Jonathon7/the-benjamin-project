@@ -13,6 +13,7 @@ const create = (req, res, next) => {
 
 const read = (req, res, next) => {
   const db = req.app.get("db");
+  console.log("hit");
   db.get_blog()
     .then(blog => {
       res.status(200).json(blog);
@@ -25,7 +26,6 @@ const read = (req, res, next) => {
 
 const getPost = (req, res, next) => {
   const db = req.app.get("db");
-
   db.get_post([req.params.id])
     .then(response => {
       res.status(200).send(response);
