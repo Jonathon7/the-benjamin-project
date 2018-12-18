@@ -16,13 +16,11 @@ export default class ViewBlog extends Component {
   }
   getPost = () => {
     // console.log(this.props.match.params.id);
-    axios
-      .get(`http://localhost:3004/api/blog/${this.props.match.params.id}`)
-      .then(response => {
-        this.setState({
-          blogs: response.data
-        });
+    axios.get(`/api/blog/${this.props.match.params.id}`).then(response => {
+      this.setState({
+        blogs: response.data
       });
+    });
   };
 
   render() {
