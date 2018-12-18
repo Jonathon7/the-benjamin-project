@@ -56,6 +56,11 @@ app.use(cors());
 //     failureRedirect: "/"
 //   })
 // );
+massive(process.env.CONNECTION_STRING)
+  .then(db => app.set("db", db), console.log("Database Connected"))
+  .catch(err => {
+    console.log(err);
+  });
 
 app.use(express.static(`${__dirname}/../build`));
 
@@ -66,11 +71,11 @@ app.get("/api/blog/:id", blog_controller.getPost);
 app.get("/api/blogs", blog_controller.read);
 app.post("/api/blogs", blog_controller.create);
 
-massive(process.env.CONNECTION_STRING)
-  .then(db => app.set("db", db), console.log("Database Connected"))
-  .catch(err => {
-    console.log(err);
-  });
+// massive(process.env.CONNECTION_STRING)
+//   .then(db => app.set("db", db), console.log("Database Connected"))
+//   .catch(err => {
+//     console.log(err);
+//   });
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build/index.html"));
