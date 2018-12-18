@@ -3,6 +3,7 @@ const express = require("express");
 const { json } = require("body-parser");
 const cors = require("cors");
 const massive = require("massive");
+const path = require("path");
 // const session = require("express-session");
 // const passport = require("passport");
 // const Auth0Strategy = require("passport-auth0");
@@ -70,6 +71,10 @@ massive(process.env.CONNECTION_STRING)
   .catch(err => {
     console.log(err);
   });
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
 
 const port = process.env.PORT || 3004;
 app.listen(port, () => {
