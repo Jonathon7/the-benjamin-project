@@ -15,7 +15,7 @@ export default class Blog extends Component {
 
   componentDidMount = () => {
     axios
-      .get("https://benjamin-project.herokuapp.com/api/blogs")
+      .get("/api/blogs")
       .then(response => {
         this.setState({ blogs: response.data });
       })
