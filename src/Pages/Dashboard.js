@@ -12,13 +12,14 @@ export default class Dashboard extends Component {
       blogs: [],
       title: "",
       date: "",
-      text: ""
+      text: "",
+      isAdmin: false
     };
   }
 
   addBlog = () => {
     axios
-      .post("http://localhost:3004/api/blogs", {
+      .post("/api/blogs", {
         title: this.state.title,
         date: this.state.date,
         text: this.state.text
@@ -37,12 +38,16 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <div className="dashboard-cont">
-          <h1>Dashboard</h1>
-          <button onClick={this.addBlog}>Add Post</button>
-          <Blogs />
-        </div>
+        {this.state.isAdmin ? (
+          <div>
+            <Navbar />
+            <div className="dashboard-cont">
+              <h1>Dashboard</h1>
+              <button onClick={this.addBlog}>Add Post</button>
+              <Blogs />
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   }

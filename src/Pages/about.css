@@ -11,6 +11,7 @@
 .about-header h3 {
   font-weight: lighter;
   line-height: 1.8;
+  font-size: 18px;
 }
 
 .about-img {
@@ -28,6 +29,7 @@
 .about-vis h3 {
   font-weight: lighter;
   line-height: 1.8;
+  font-size: 18px;
 }
 
 @media (min-width: 1350px) {

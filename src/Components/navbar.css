@@ -7,14 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 1s;
 }
 
-.resp-nav h1 {
-  padding-left: 3%;
-  margin: 0px;
-  font-size: 23px;
-  letter-spacing: 1.8px;
+.nav-logo-h1 {
   font-family: "raleway";
+  margin-left: 10px;
+  font-size: 23px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
 }
 
 .label {

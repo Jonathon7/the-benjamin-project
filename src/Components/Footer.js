@@ -3,9 +3,9 @@ import "./footer.css";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  // const redirect = () => {
-  //   window.location.href = `${process.env.REACT_APP_SERVER}/login`;
-  // };
+  const redirect = () => {
+    window.location.href = `${process.env.REACT_APP_SERVER}/login`;
+  };
   return (
     <div className="footer-cont">
       <div className="footer-links">
@@ -25,7 +25,9 @@ export default function Footer() {
           <Link to="/give">Give</Link>
         </li>
         <li>
-          <button className="login-link">Staff Login</button>
+          <button className="login-link" onClick={redirect}>
+            Staff Login
+          </button>
         </li>
       </div>
     </div>

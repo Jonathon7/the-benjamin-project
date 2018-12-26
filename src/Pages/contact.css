@@ -11,10 +11,12 @@
 .contact-header h3 {
   font-weight: lighter;
   line-height: 1.8;
+  font-size: 18px;
 }
 
 .contact-info h3 {
   font-weight: lighter;
+  font-size: 18px;
 }
 
 .contact-form {

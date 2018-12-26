@@ -22,7 +22,7 @@ export default class Navbar extends Component {
       <span>
         <nav className="resp-nav">
           <h1>
-            <Link className="nav-cont-h1" to="/">
+            <Link className="nav-logo-h1" to="/">
               The Benjamin Project
             </Link>
           </h1>
