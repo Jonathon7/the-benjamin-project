@@ -13,7 +13,7 @@ const create = (req, res, next) => {
 
 const read = (req, res, next) => {
   const db = req.app.get("db");
-  console.log("hit");
+  // console.log("hit");
   db.get_blog()
     .then(blog => {
       res.status(200).json(blog);

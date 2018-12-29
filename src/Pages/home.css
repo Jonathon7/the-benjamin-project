@@ -1,8 +1,50 @@
-.hero-image {
+.hero-image-cont {
   height: 40vh;
   width: 100%;
-  background-color: gray;
   margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-h1 {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.hero-image-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 33%;
+}
+
+.hero-image-button {
+  padding: 9px;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+  border-color: #8a8888;
+  font-family: "raleway";
+  font-size: 15px;
+  opacity: 0.4;
+  transition: 1s;
+}
+
+.hero-image-button:hover {
+  color: #d1b29a;
+  margin-bottom: 8px;
+  opacity: 1;
+}
+
+.hero-image {
+  height: 40vh;
+  width: 20%;
+  background-image: url("../images/wolf-image.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-right: 10%;
 }
 
 .home-cont {
@@ -41,7 +83,22 @@
   font-family: "raleway";
 }
 
+@media (max-width: 1350px) {
+  .hero-image-h1,
+  .hero-image-button,
+  .button-link,
+  .hero-image-header {
+    display: none;
+  }
+}
+
 @media (min-width: 1350px) {
+  .hero-image-cont {
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 15%;
+    font-family: "raleway";
+  }
   .home-text-cont {
     display: flex;
     justify-content: space-between;

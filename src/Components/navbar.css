@@ -1,7 +1,7 @@
 .resp-nav {
   position: sticky;
   top: 0;
-  background-color: #3a3740;
+  background-color: #0d0d0d;
   width: 100%;
   height: 10vh;
   display: flex;
@@ -22,6 +22,7 @@
 .label {
   padding-right: 5%;
   font-size: 32px;
+  color: white;
 }
 
 .menu {
@@ -62,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #3a3740;
+  background-color: #0d0d0d;
   height: 10vh;
 }
 

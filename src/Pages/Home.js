@@ -3,6 +3,7 @@ import "./home.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Blogs from "../Components/Blogs/Blogs";
+import { Link } from "react-router-dom";
 
 export default class Home extends Component {
   constructor() {
@@ -14,7 +15,15 @@ export default class Home extends Component {
     return (
       <div>
         <Navbar />
-        <div className="hero-image" />
+        <div className="hero-image-cont">
+          <div className="hero-image-header">
+            <h1 className="hero-image-h1">The Benjamin Project</h1>
+            <Link to="/about" className="button-link">
+              <button className="hero-image-button">Learn More</button>
+            </Link>
+          </div>
+          <div className="hero-image" />
+        </div>
         <div className="home-cont">
           <div className="home-text-cont">
             <div className="home-text">
