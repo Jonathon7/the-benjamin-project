@@ -4,6 +4,37 @@ import Footer from "../Components/Footer";
 import "./contact.css";
 
 export default class Contact extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      fname: "",
+      lname: "",
+      phone: "",
+      email: "",
+      message: "",
+      input: {}
+    };
+  }
+
+  handleClick = () => {
+    const { fname, lname, phone, email, message } = this.state;
+    this.setState({
+      input: {
+        fname: fname,
+        lname: lname,
+        phone: phone,
+        email: email,
+        message: message
+      }
+    });
+  };
+
+  handleSubmit(event) {
+    alert("A name was submitted: " + this.state.value);
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div>
@@ -19,13 +50,19 @@ export default class Contact extends Component {
           </div>
           <div className="contact-content">
             <div className="form-cont">
-              <form className="contact-form" name="contact" method="post">
+              <form
+                className="contact-form"
+                name="contact"
+                method="post"
+                onSubmit={this.handleSubmit}
+              >
                 <label htmlFor="fname">First Name</label>
                 <input
                   type="text"
                   id="fname"
                   name="firstname"
                   placeholder="Your name.."
+                  onChange={e => this.setState({ fname: e.target.value })}
                 />
 
                 <label htmlFor="lname">Last Name</label>
@@ -34,6 +71,7 @@ export default class Contact extends Component {
                   id="lname"
                   name="lastname"
                   placeholder="Your last name.."
+                  onChange={e => this.setState({ lname: e.target.value })}
                 />
 
                 <label htmlFor="phone">Phone</label>
@@ -42,6 +80,7 @@ export default class Contact extends Component {
                   type="number"
                   name="phone"
                   placeholder="Your phone number..."
+                  onChange={e => this.setState({ phone: e.target.value })}
                 />
 
                 <label htmlFor="email">Email</label>
@@ -50,6 +89,7 @@ export default class Contact extends Component {
                   id="email"
                   name="Email"
                   placeholder="Your email.."
+                  onChange={e => this.setState({ email: e.target.value })}
                 />
 
                 <label htmlFor="subject">Message</label>
@@ -57,8 +97,13 @@ export default class Contact extends Component {
                   id="subject"
                   name="subject"
                   placeholder="Write something.."
+                  onChange={e => this.setState({ message: e.target.value })}
                 />
-                <input type="submit" value="Submit" />
+                <input
+                  type="submit"
+                  value="Submit"
+                  onClick={this.handleClick}
+                />
               </form>
             </div>
             <div className="contact-info-cont">

@@ -94,11 +94,15 @@
 
 @media (min-width: 1350px) {
   .hero-image-cont {
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-    padding-left: 15%;
     font-family: "raleway";
   }
+
+  .hero-image-header {
+    margin-right: 12%;
+  }
+
   .home-text-cont {
     display: flex;
     justify-content: space-between;
